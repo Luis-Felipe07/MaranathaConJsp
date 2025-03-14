@@ -1,0 +1,110 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general oscuro con degradado */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ecf0f1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+/* Contenedor principal */
+.myv-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Título principal */
+.myv-container h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Contenedor de paneles */
+.myv-panels {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Cada panel */
+.panel {
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* Títulos dentro de cada panel */
+.panel h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Tablas en los paneles */
+.panel table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.panel table th, .panel table td {
+    padding: 8px;
+    border: 1px solid #7f8c8d;
+    text-align: center;
+    color: #fff;
+}
+
+/* Bloque para el botón */
+.myv-button-container {
+    margin-top: 30px; 
+    text-align: center;
+}
+
+/* Estilo del botón principal */
+.myv-button-container button {
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover y click del botón */
+.myv-button-container button:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px);
+}
+
+.myv-button-container button:active {
+    transform: translateY(0);
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+    .myv-container {
+        margin: 20px auto;
+    }
+    .myv-panels {
+        grid-template-columns: 1fr; 
+    }
+}

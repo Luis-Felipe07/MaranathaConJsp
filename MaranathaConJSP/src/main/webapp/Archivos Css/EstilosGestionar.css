@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body: fondo oscuro con degradado */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ecf0f1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+/* Contenedor principal */
+.gestion-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título principal */
+.gestion-container h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Contenedor para los paneles */
+.gestion-panels {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Cada panel individual */
+.panel {
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left; 
+}
+
+/* Título de cada panel */
+.panel h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Etiquetas */
+.panel label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* Inputs de texto */
+.panel input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #7f8c8d;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+/* Efecto hover/focus en inputs */
+.panel input[type="text"]:focus {
+    outline: none;
+    border-color: #4A90E2;
+}
+
+/* Select */
+.panel select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #7f8c8d;
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+/* Efecto hover/focus en select */
+.panel select:focus {
+    outline: none;
+    border-color: #4A90E2;
+}
+
+/* Botones */
+.panel button {
+    display: inline-block;
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* Hover en botones */
+.panel button:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px);
+}
+
+/* Efecto click */
+.panel button:active {
+    transform: translateY(0);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 480px) {
+    .gestion-container {
+        padding: 10px;
+    }
+    
+    .gestion-panels {
+        grid-template-columns: 1fr; 
+    }
+}

@@ -1,0 +1,74 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background:#1E1E1E;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal */
+.admin-container {
+    text-align: center;
+    padding: 60px 20px;
+    
+}
+
+/* Título principal */
+.admin-container h1 {
+    margin-bottom: 10px;
+    color:#ffffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*  texto de bienvenida */
+.admin-container p {
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* Contenedor para los botones */
+.admin-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    flex-wrap: wrap; 
+}
+
+/* Estilo de los botones */
+.admin-btn {
+    display: inline-block;
+    background-color: #4A90E2; 
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover de los botones */
+.admin-btn:hover {
+    background-color: #357ABD;
+    transform: translateY(-3px);
+}
+
+/* Efecto click */
+.admin-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsividad en pantallas pequeñas */
+@media (max-width: 480px) {
+    .admin-container {
+        padding: 40px 10px;
+    }
+    .admin-btn {
+        margin-bottom: 20px;
+        width: 80%;
+        max-width: 300px;
+    }
+}

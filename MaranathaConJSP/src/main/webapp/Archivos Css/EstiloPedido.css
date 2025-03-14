@@ -1,0 +1,264 @@
+/* Reinicio básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo oscuro con degradado */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ecf0f1;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Contenedor principal */
+.pedido-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(44, 62, 80, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Título principal */
+.pedido-container h1 {
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ecf0f1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de pedidos predeterminados */
+.pedidos-predeterminados {
+    margin-bottom: 40px;
+}
+
+.pedidos-predeterminados h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ecf0f1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de imágenes */
+.pedidos-imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+/* Estilo de las imágenes individuales */
+.pedidos-imagenes img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pedidos-imagenes img:hover {
+    transform: scale(1.05);
+    border-color: #3498db;
+}
+
+/* Estructura para contenido principal - 2 columnas */
+.pedido-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Sección de menús */
+.menus-grid {
+    background: rgba(52, 73, 94, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+}
+
+.menu-select-block {
+    width: 100%;
+}
+
+.menu-select-block label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ecf0f1;
+}
+
+.menu-select-block select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #7f8c8d;
+    border-radius: 6px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.menu-select-block select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Formulario de pedido */
+.pedido-form {
+    background: rgba(52, 73, 94, 0.7);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pedido-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiquetas y campos */
+.pedido-form label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ecf0f1;
+    font-size: 1rem;
+}
+
+.pedido-form label:first-child {
+    margin-top: 0;
+}
+
+.pedido-form select,
+.pedido-form input[type="text"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #7f8c8d;
+    border-radius: 6px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo para checkbox */
+.pedido-form input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    accent-color: #3498db;
+}
+
+/* Efecto focus */
+.pedido-form select:focus,
+.pedido-form input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Placeholder */
+.pedido-form input::placeholder {
+    color: #95a5a6;
+}
+
+/* Botón de confirmar */
+.pedido-form button {
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.pedido-form button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.pedido-form button:active {
+    transform: translateY(0);
+}
+
+/* Mensajes de éxito o error */
+.mensaje-exito, 
+.mensaje-error {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mensaje-exito {
+    background-color: rgba(46, 204, 113, 0.2);
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+}
+
+.mensaje-error {
+    background-color: rgba(231, 76, 60, 0.2);
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+}
+
+/* Responsividad */
+@media (max-width: 900px) {
+    .pedido-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .pedidos-imagenes img {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pedido-container {
+        width: 95%;
+        padding: 20px 15px;
+    }
+    
+    .pedidos-imagenes {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pedidos-imagenes img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
+    
+    .pedido-container h1 {
+        font-size: 1.8rem;
+    }
+}
